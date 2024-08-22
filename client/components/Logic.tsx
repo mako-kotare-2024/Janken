@@ -2,32 +2,28 @@ console.log('Welcome to Janken')
 
 // Variables
 let result = false
-
+let playerChoice = 'rock'
 // Options
 const options = ['rock', 'paper', 'scissors']
 
-// Enemy Select
-function getRandomInt(max) {
+// Button Select
+function getRandomInt(max: number) {
   return Math.floor(Math.random() * max)
 }
 let computerChoice = 'rock'
 function updateComputerChoice() {
   computerChoice = options[getRandomInt(3)]
 }
-
-// Player Select
-let playerSelect = 'rock'
-function updatePlayerSelect(num) {
-  playerSelect = options[num]
+export function updatePlayerChoice(str: string) {
+  playerChoice = str
+  hasPlayerWon()
 }
-
 // Game Start
 // TODO make funtion that starts game on button click
-function buttonClicked(e) {
-  const num = e.target.id
-  updatePlayerSelect(num)
+function hasPlayerWon() {
   updateComputerChoice()
-  if (playerHasWon() !== false) {
+  playerHasWon(playerChoice, computerChoice)
+  if (result !== false) {
     return console.log('win')
   } else {
     return console.log('lose')
@@ -35,7 +31,7 @@ function buttonClicked(e) {
 }
 
 // Shows when won
-export function playerHasWon(playerChoice, computerChoice) {
+function playerHasWon(playerChoice: string, computerChoice: string) {
   switch (true) {
     //if player choice comes back as a 'rock' string, then result = true/win
     case playerChoice === 'rock' && computerChoice === 'scissors':
@@ -48,5 +44,5 @@ export function playerHasWon(playerChoice, computerChoice) {
       result = true
       break
   }
-  return false
+  return result
 }
