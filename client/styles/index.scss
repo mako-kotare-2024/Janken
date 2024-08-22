@@ -1,31 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
-
-html, 
-body {
-  font-family: 'Montserrat', sans-serif;
-}
 .Game {
   background-color: #0000AC;
+  padding: 20px;
+  // text-align: center;
 }
-//! IF YOU WANT TO CHANGE THE SIZE DO IT PER INDIVIDUAL BUTTON 
-//# .buttonGroup {
 
-// }
-.rock {
-  outline: none;
-  background: none;
-  box-shadow: none;
-  border: none;
+.buttonGroup {
+  display: flex; /* Flexbox layout */
+  // justify-content: center; /* Center the group horizontally */
+  gap: 10px; /* Add gap between buttons */
+  margin-bottom: 20px; /* Add some space between buttons and player */
 }
-.scissors {
-  outline: none;
+
+button {
   background: none;
-  box-shadow: none;
   border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
-.paper {
-  outline: none;
-  background: none;
-  box-shadow: none;
-  border: none;
+
+button img {
+  width: 128px; /* Adjust the size of the images */
+  height: 128px;
+}
+
+.player, .computer, .bricks {
+  // text-align: center;
+  margin-top: 20px;
+}
+
+.player {
+  margin-top: 0; /* Ensure player section is close to buttonGroup */
+  // text-align: center;
 }
