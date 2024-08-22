@@ -7,12 +7,15 @@ const __dirname = Path.dirname(__filename)
 export default {
   development: {
     client: 'sqlite3',
-    useNullAsDefault: true,
     connection: {
-      filename: Path.join(__dirname, 'dev.sqlite3'),
+      filename: './dev.sqlite3',
     },
-    pool: {
-      afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
+    useNullAsDefault: true,
+    migrations: {
+      directory: './migrations',
+    },
+    seeds: {
+      directory: './seeds',
     },
   },
 
