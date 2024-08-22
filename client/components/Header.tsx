@@ -1,9 +1,10 @@
+import logo from '../images/title.png'
+
 function Header() {
   return (
-    <div>
-      <h2>Header</h2>
-      <p>logo to go here?</p>
-    </div>
+    <header className="header">
+      <img src={logo} className="logo" alt="logo" />
+    </header>
   )
 }
 
