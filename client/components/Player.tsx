@@ -13,6 +13,6 @@ export default function PlayerState(states) {
             <img src="/images/alex-paper.png" alt="Player selected paper" />
         )
     } else if (PlayerSelect === 3) {
-        <img src="/images/alex-scissors.png" alt="Player selected Scissors"
+        <img src="/images/alex-scissors.png" alt="Player selected Scissors" />
     }
 }
