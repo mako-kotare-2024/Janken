@@ -2,19 +2,19 @@ export async function seed(knex) {
   await knex('choices').insert([
     {
       id: 1,
-      name: 'Rock',
+      name: 'rock',
       player_img: '/images/alex-rock.png',
       computer_img: '/images/gooseka-rock.png',
     },
     {
       id: 2,
-      name: 'Paper',
+      name: 'paper',
       player_img: '/images/alex-paper.png',
       computer_img: '/images/gooseka-paper.png',
     },
     {
       id: 3,
-      name: 'Scissors',
+      name: 'scissors',
       player_img: '/images/alex-scissors.png',
       computer_img: '/images/gooseka-scissors.png',
     },

@@ -1,7 +1,11 @@
 function Footer() {
   return (
     <div>
-      <p>This is the footer</p>
+      {/* just bricks, no biggie */}
+      <div className="bricks">
+        <img src="/images/floor.png" alt="floor" />
+        {/* Bricks for the people can't fly */}
+      </div>
     </div>
   )
 }

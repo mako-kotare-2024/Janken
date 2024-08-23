@@ -1,16 +1,11 @@
-
 body {
   display: flex;
-  background-color: #0000AC;
+  background-color: #0000ac;
   width: 800px;
- 
 }
 
 .app {
-  
 }
-
-
 
 .logo {
   display: block;
@@ -19,7 +14,9 @@ body {
 }
 
 .Game {
-  width: 100%;
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
   padding-left: 40px;
   padding-right: 40px;
   // text-align: center;
@@ -49,10 +46,11 @@ button img {
   opacity: 0.2;
 }
 
-.player, .computer, .bricks {
+.player,
+.computer,
+.bricks {
   // text-align: center;
   margin-top: 20px;
-  
 }
 
 // .playersContainer {
@@ -69,16 +67,12 @@ button img {
   width: 100px;
   margin: auto;
   display: block;
-  
- 
 }
 
 .computer {
-  margin-top: 0; /* Ensure player section is close to buttonGroup */
-  width: 100px;
-    margin: auto;
-    display: block;
-  
+  margin-top: 100px; /* Ensure player section is close to buttonGroup */
+  margin: 10 auto;
+  display: block;
 }
 
 .footer {

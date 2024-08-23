@@ -10,8 +10,9 @@ type Choice = {
 function Game() {
   const [choices, setChoices] = useState<Choice[]>([])
 
-  const [playerChoice, setPlayerChoice] = useState<string>('idle') 
+  const [playerChoice, setPlayerChoice] = useState<string>('idle')
 
+  console.log(playerChoice)
   useEffect(() => {
     // Get choices from database via API
     const fetchChoices = async () => {
@@ -28,17 +29,17 @@ function Game() {
   }, [])
 
   const handleRock = () => {
-    setPlayerChoice('rock') 
+    setPlayerChoice('rock')
   }
   const handlePaper = () => {
-    setPlayerChoice('paper') 
+    setPlayerChoice('paper')
   }
   const handleScissors = () => {
-    setPlayerChoice('scissors') 
+    setPlayerChoice('scissors')
   }
+
   return (
     <div className="Game">
-      <h2>Rock Paper Scissors</h2>
       {/* STATE THINGS GO UNDER THE GAME */}
 
       <div className="playergroup">
@@ -53,31 +54,29 @@ function Game() {
             <img src="/images/choose-paper.png" alt="Choose Paper" />
           </button>
         </div>
-      {/* PLAYER THINGS */}
-      <div className="player">
-        {choices.length > 0 && (
-          <img
-            src={choices.find((choice) => choice.name === 'idle')?.player_img}
-            alt="The player prepping"
-          />
-        )}
-      </div>
 
-        <div className="computerGroup">
-          {/* COMPUTER THINGS */}
-          <div className="computer">
-            <img src="/images/gooseka-paper.png" alt="The player prepping" />
-            {/* Enemy Image here */}
-          </div>
+        {/* PLAYER THINGS */}
+        <div className="player">
+          {choices.length > 0 && (
+            <img
+              src={
+                choices.find((choice) => choice.name === `${playerChoice}`)
+                  ?.player_img
+              }
+              alt="The player prepping"
+            />
+          )}
         </div>
       </div>
 
-      {/* just bricks, no biggie */}
-      <div className="bricks">
-        <img src="/images/floor.png" alt="floor" />
-        {/* Bricks for the people can't fly */}
+      {/* <div className="computerGroup"> */}
+      {/* COMPUTER THINGS */}
+      <div className="computer">
+        <img src="/images/gooseka-paper.png" alt="The player prepping" />
+        {/* Enemy Image here */}
       </div>
     </div>
+    // </div>
   )
 }
 
