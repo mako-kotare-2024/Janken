@@ -1,11 +1,27 @@
 
-.app {
+body {
+  display: flex;
   background-color: #0000AC;
+  width: 800px;
+ 
+}
+
+.app {
+  
+}
+
+
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Game {
-  background-color: #0000AC;
-  padding: 20px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
   // text-align: center;
 }
 
@@ -29,12 +45,45 @@ button img {
   height: 128px;
 }
 
+.choice:hover {
+  opacity: 0.2;
+}
+
 .player, .computer, .bricks {
   // text-align: center;
   margin-top: 20px;
+  
+}
+
+// .playersContainer {
+//   display: flex;
+// }
+
+.playergroup {
+  align-content: center;
+  width: fit-content;
 }
 
 .player {
   margin-top: 0; /* Ensure player section is close to buttonGroup */
-  // text-align: center;
+  width: 100px;
+  margin: auto;
+  display: block;
+  
+ 
+}
+
+.computer {
+  margin-top: 0; /* Ensure player section is close to buttonGroup */
+  width: 100px;
+    margin: auto;
+    display: block;
+  
+}
+
+.footer {
+  background-color: black;
+  height: 80px;
+  color: chocolate;
+  font-weight: 20pt;
 }
