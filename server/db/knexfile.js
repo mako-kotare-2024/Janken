@@ -8,14 +8,14 @@ export default {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3',
+      filename: Path.join(__dirname, 'dev.sqlite3'),
     },
     useNullAsDefault: true,
     migrations: {
-      directory: './migrations',
+      directory: Path.join(__dirname, 'migrations'),
     },
     seeds: {
-      directory: './seeds',
+      directory: Path.join(__dirname, 'seeds'),
     },
   },
 
