@@ -1,14 +1,33 @@
-// import Computer from ''
-// import Player from ''
-// import PlayerChoose from ''
-// import paper from ''
-// import rock from ''
-// import scissors from ''
+import { useState, useEffect } from 'react'
+
+type Choice = {
+  id: number
+  name: string
+  player_img: string
+  computer_img: string
+}
 
 function Game() {
+  const [choices, setChoices] = useState<Choice[]>([])
+
+  useEffect(() => {
+    // Get choices from database via API
+    const fetchChoices = async () => {
+      try {
+        const response = await fetch('/api/v1/choices')
+        const data = await response.json()
+        setChoices(data)
+      } catch (error) {
+        console.error('Error fetching choices:', error)
+      }
+    }
+
+    fetchChoices()
+  }, [])
+
   return (
     <div className="Game">
-      <h2></h2>
+      <h2>Rock Paper Scissors</h2>
       {/* STATE THINGS GO UNDER THE GAME */}
 
       <div className="playergroup">
@@ -23,22 +42,24 @@ function Game() {
             <img src="/images/choose-paper.png" alt="Choose Paper" />
           </button>
         </div>
+      {/* PLAYER THINGS */}
+      <div className="player">
+        {choices.length > 0 && (
+          <img
+            src={choices.find((choice) => choice.name === 'idle')?.player_img}
+            alt="The player prepping"
+          />
+        )}
+      </div>
 
-        <div className="playersContainer">
-          {/* PLAYER THINGS */}
-          <div className="player">
-            <img src="/images/alex.png" alt="The player prepping" />
-            {/* Player Image here */}
-          </div>
-        </div>
-
-        <div className="computerGroup">
-          {/* COMPUTER THINGS */}
-          <div className="computer">
-            <img src="/images/gooseka-paper.png" alt="The player prepping" />
-            {/* Enemy Image here */}
-          </div>
-        </div>
+      {/* COMPUTER THINGS */}
+      <div className="computer">
+        {choices.length > 0 && (
+          <img
+            src={choices.find((choice) => choice.name === 'idle')?.computer_img}
+            alt="The computer prepping"
+          />
+        )}
       </div>
 
       {/* just bricks, no biggie */}
