@@ -10,6 +10,8 @@ type Choice = {
 function Game() {
   const [choices, setChoices] = useState<Choice[]>([])
 
+  const [playerChoice, setPlayerChoice] = useState<string>('idle') 
+
   useEffect(() => {
     // Get choices from database via API
     const fetchChoices = async () => {
@@ -25,6 +27,15 @@ function Game() {
     fetchChoices()
   }, [])
 
+  const handleRock = () => {
+    setPlayerChoice('rock') 
+  }
+  const handlePaper = () => {
+    setPlayerChoice('paper') 
+  }
+  const handleScissors = () => {
+    setPlayerChoice('scissors') 
+  }
   return (
     <div className="Game">
       <h2>Rock Paper Scissors</h2>
@@ -32,13 +43,13 @@ function Game() {
 
       <div className="playergroup">
         <div className="buttonGroup">
-          <button className="rock choice">
+          <button className="rock choice" onClick={handleRock}>
             <img src="/images/choose-rock.png" alt="Choose Rock" />
           </button>
-          <button className="scissors choice">
+          <button className="scissors choice" onClick={handleScissors}>
             <img src="/images/choose-scissors.png" alt="Choose Scissors" />
           </button>
-          <button className="paper choice">
+          <button className="paper choice" onClick={handlePaper}>
             <img src="/images/choose-paper.png" alt="Choose Paper" />
           </button>
         </div>
