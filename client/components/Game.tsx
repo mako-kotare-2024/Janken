@@ -8,10 +8,9 @@
 function Game() {
   return (
     <div className="Game">
-      <h2>Game</h2>
+      <h2></h2>
       {/* STATE THINGS GO UNDER THE GAME */}
 
-      
       <div className="buttonGroup">
         <button className="rock">
           <img src="/images/choose-rock.png" alt="Choose Rock" />
@@ -23,22 +22,22 @@ function Game() {
           <img src="/images/choose-paper.png" alt="Choose Paper" />
         </button>
       </div>
-      
+
       {/* PLAYER THINGS */}
       <div className="player">
-        <img src="/images/alex.png" alt="The player prepping"/>
+        <img src="/images/alex.png" alt="The player prepping" />
         {/* Player Image here */}
       </div>
-      
+
       {/* COMPUTER THINGS */}
       <div className="computer">
-        <p>computer</p>
+        <img src="/images/gooseka-paper.png" alt="The player prepping" />
         {/* Enemy Image here */}
       </div>
-      
+
       {/* just bricks, no biggie */}
       <div className="bricks">
-        <p>bricks</p>
+        <img src="/images/floor.png" alt="floor" />
         {/* Bricks for the people can't fly */}
       </div>
     </div>

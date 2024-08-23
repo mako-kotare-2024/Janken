@@ -4,7 +4,7 @@
  */
 export function up(knex) {
   return knex.schema.createTable('choices', (table) => {
-    table.integer('id')
+    table.integer('id').primary()
     table.string('name')
     table.string('player_img')
     table.string('computer_img')

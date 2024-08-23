@@ -1,4 +1,4 @@
-import logo from '../images/title.png'
+import logo from '/images/title.png'
 
 function Header() {
   return (
