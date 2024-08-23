@@ -30,18 +30,18 @@ function Game() {
       <h2>Rock Paper Scissors</h2>
       {/* STATE THINGS GO UNDER THE GAME */}
 
-      <div className="buttonGroup">
-        <button className="rock">
-          <img src="/images/choose-rock.png" alt="Choose Rock" />
-        </button>
-        <button className="scissors">
-          <img src="/images/choose-scissors.png" alt="Choose Scissors" />
-        </button>
-        <button className="paper">
-          <img src="/images/choose-paper.png" alt="Choose Paper" />
-        </button>
-      </div>
-
+      <div className="playergroup">
+        <div className="buttonGroup">
+          <button className="rock choice">
+            <img src="/images/choose-rock.png" alt="Choose Rock" />
+          </button>
+          <button className="scissors choice">
+            <img src="/images/choose-scissors.png" alt="Choose Scissors" />
+          </button>
+          <button className="paper choice">
+            <img src="/images/choose-paper.png" alt="Choose Paper" />
+          </button>
+        </div>
       {/* PLAYER THINGS */}
       <div className="player">
         {choices.length > 0 && (
