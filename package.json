@@ -29,6 +29,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.7",
+    "@types/knex": "^0.16.1",
     "express": "^4.17.2",
     "knex": "^2.5.1",
     "sqlite3": "^5.1.7",
