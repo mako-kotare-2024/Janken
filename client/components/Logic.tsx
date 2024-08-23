@@ -1,23 +1,31 @@
 console.log('Welcome to Janken')
 
+
 // Variables
 let result = false
-export let playerChoice = 'rock'
+let playerChoice = 'rock'
 // Options
 const options = ['rock', 'paper', 'scissors']
+
 
 // Button Select
 function getRandomInt(max: number) {
   return Math.floor(Math.random() * max)
 }
+
+
 let computerChoice = 'rock'
 function updateComputerChoice() {
   computerChoice = options[getRandomInt(3)]
 }
+
+
 export function updatePlayerChoice(str: string) {
   playerChoice = str
   hasPlayerWon()
 }
+
+
 // Game Start
 // TODO make funtion that starts game on button click
 function hasPlayerWon() {
@@ -29,6 +37,7 @@ function hasPlayerWon() {
     return console.log('lose')
   }
 }
+
 
 // Shows when won
 function playerHasWon(playerChoice: string, computerChoice: string) {
