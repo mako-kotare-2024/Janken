@@ -35,7 +35,7 @@ function Game() {
         <div className="computerGroup">
           {/* COMPUTER THINGS */}
           <div className="computer">
-            <img src="/images/gooseka-paper.png" alt="The player prepping" />
+            <img src="/images/gooseka.png" alt="The player prepping" />
             {/* Enemy Image here */}
           </div>
         </div>
