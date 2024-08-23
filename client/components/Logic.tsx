@@ -2,7 +2,7 @@ console.log('Welcome to Janken')
 
 // Variables
 let result = false
-let playerChoice = 'rock'
+export let playerChoice = 'rock'
 // Options
 const options = ['rock', 'paper', 'scissors']
 
@@ -46,3 +46,4 @@ function playerHasWon(playerChoice: string, computerChoice: string) {
   }
   return result
 }
+// Seem confusing, but to run the game call updatePlayerChoice(?) with 'rock', 'paper', or 'scissors'
