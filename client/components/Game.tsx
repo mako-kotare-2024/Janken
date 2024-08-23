@@ -11,28 +11,34 @@ function Game() {
       <h2></h2>
       {/* STATE THINGS GO UNDER THE GAME */}
 
-      <div className="buttonGroup">
-        <button className="rock">
-          <img src="/images/choose-rock.png" alt="Choose Rock" />
-        </button>
-        <button className="scissors">
-          <img src="/images/choose-scissors.png" alt="Choose Scissors" />
-        </button>
-        <button className="paper">
-          <img src="/images/choose-paper.png" alt="Choose Paper" />
-        </button>
-      </div>
+      <div className="playergroup">
+        <div className="buttonGroup">
+          <button className="rock choice">
+            <img src="/images/choose-rock.png" alt="Choose Rock" />
+          </button>
+          <button className="scissors choice">
+            <img src="/images/choose-scissors.png" alt="Choose Scissors" />
+          </button>
+          <button className="paper choice">
+            <img src="/images/choose-paper.png" alt="Choose Paper" />
+          </button>
+        </div>
 
-      {/* PLAYER THINGS */}
-      <div className="player">
-        <img src="/images/alex.png" alt="The player prepping" />
-        {/* Player Image here */}
-      </div>
+        <div className="playersContainer">
+          {/* PLAYER THINGS */}
+          <div className="player">
+            <img src="/images/alex.png" alt="The player prepping" />
+            {/* Player Image here */}
+          </div>
+        </div>
 
-      {/* COMPUTER THINGS */}
-      <div className="computer">
-        <img src="/images/gooseka-paper.png" alt="The player prepping" />
-        {/* Enemy Image here */}
+        <div className="computerGroup">
+          {/* COMPUTER THINGS */}
+          <div className="computer">
+            <img src="/images/gooseka-paper.png" alt="The player prepping" />
+            {/* Enemy Image here */}
+          </div>
+        </div>
       </div>
 
       {/* just bricks, no biggie */}
